@@ -1,0 +1,763 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .rm-root {
+        background: #0a0a0f;
+        background-image:
+            radial-gradient(ellipse 80% 50% at 20% -10%, rgba(255, 140, 50, 0.12) 0%, transparent 60%),
+            radial-gradient(ellipse 60% 40% at 80% 110%, rgba(255, 80, 30, 0.08) 0%, transparent 55%);
+        min-height: 100vh;
+        font-family: 'DM Sans', sans-serif;
+        color: #e8e4dc;
+        padding: 0 2rem 4rem;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 3rem 0 2rem;
+    }
+
+    .eyebrow {
+        font-family: 'DM Mono', monospace;
+        font-size: 0.68rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #ff8c32;
+        margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(2.4rem, 5vw, 4.5rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        color: #f0ebe0;
+        line-height: 1;
+        margin-bottom: 0.9rem;
+    }
+
+    .hero h1 span {
+        color: #ff8c32;
+    }
+
+    .hero-sub {
+        font-size: 1rem;
+        font-weight: 300;
+        color: #a09890;
+        max-width: 500px;
+        margin: 0 auto;
+        line-height: 1.65;
+    }
+
+    .divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255, 140, 50, 0.3), transparent);
+        margin: 1.8rem 0;
+    }
+
+    .main-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 700px) {
+        .main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .input-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 140, 50, 0.15);
+        border-radius: 16px;
+        padding: 1.8rem 2rem;
+    }
+
+    .input-label {
+        font-family: 'DM Mono', monospace;
+        font-size: 0.68rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #ff8c32;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .topic-input {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 140, 50, 0.25);
+        border-radius: 10px;
+        color: #f0ebe0;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+        outline: none;
+        transition: border-color 0.2s, box-shadow 0.2s;
+        margin-bottom: 1rem;
+    }
+
+    .topic-input:focus {
+        border-color: #ff8c32;
+        box-shadow: 0 0 0 3px rgba(255, 140, 50, 0.12);
+    }
+
+    .topic-input::placeholder {
+        color: #504840;
+    }
+
+    .run-btn {
+        width: 100%;
+        background: linear-gradient(135deg, #ff8c32 0%, #ff5a1a 100%);
+        color: #0a0a0f;
+        font-family: 'Syne', sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
+        letter-spacing: 0.04em;
+        border: none;
+        border-radius: 10px;
+        padding: 0.75rem 2rem;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(255, 140, 50, 0.3);
+        transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+    }
+
+    .run-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(255, 140, 50, 0.4);
+    }
+
+    .run-btn:active {
+        transform: translateY(0);
+    }
+
+    .run-btn:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .examples {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .ex-label {
+        font-family: 'DM Mono', monospace;
+        font-size: 0.65rem;
+        color: #504840;
+        letter-spacing: 0.1em;
+    }
+
+    .ex-chip {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 6px;
+        padding: 0.22rem 0.65rem;
+        font-size: 0.74rem;
+        color: #a09890;
+        cursor: pointer;
+        transition: background 0.15s, border-color 0.15s;
+    }
+
+    .ex-chip:hover {
+        background: rgba(255, 140, 50, 0.08);
+        border-color: rgba(255, 140, 50, 0.3);
+        color: #ff8c32;
+    }
+
+    .section-heading {
+        font-family: 'Syne', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #f0ebe0;
+        margin-bottom: 1rem;
+    }
+
+    .step-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 14px;
+        padding: 1.2rem 1.5rem;
+        margin-bottom: 1rem;
+        position: relative;
+        overflow: hidden;
+        transition: border-color 0.3s, background 0.3s;
+    }
+
+    .step-card::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        border-radius: 14px 0 0 14px;
+        background: rgba(255, 255, 255, 0.05);
+        transition: background 0.3s;
+    }
+
+    .step-card.active {
+        border-color: rgba(255, 140, 50, 0.4);
+        background: rgba(255, 140, 50, 0.04);
+    }
+
+    .step-card.active::before {
+        background: #ff8c32;
+    }
+
+    .step-card.done {
+        border-color: rgba(80, 200, 120, 0.3);
+        background: rgba(80, 200, 120, 0.03);
+    }
+
+    .step-card.done::before {
+        background: #50c878;
+    }
+
+    .step-header {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+    }
+
+    .step-num {
+        font-family: 'DM Mono', monospace;
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+        color: #ff8c32;
+        opacity: 0.7;
+    }
+
+    .step-title {
+        font-family: 'Syne', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #f0ebe0;
+    }
+
+    .step-status {
+        margin-left: auto;
+        font-family: 'DM Mono', monospace;
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+    }
+
+    .s-waiting {
+        color: #444;
+    }
+
+    .s-running {
+        color: #ff8c32;
+    }
+
+    .s-done {
+        color: #50c878;
+    }
+
+    .step-desc {
+        font-size: 0.8rem;
+        color: #605850;
+        margin-top: 0.25rem;
+    }
+
+    .spinner-dot {
+        display: inline-block;
+        animation: spin-blink 1s steps(3, end) infinite;
+    }
+
+    @keyframes spin-blink {
+        0% {
+            content: '●'
+        }
+
+        33% {
+            opacity: 0.3
+        }
+
+        66% {
+            opacity: 0.7
+        }
+
+        100% {
+            opacity: 1
+        }
+    }
+
+    .results-section {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .result-panel {
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 14px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+    }
+
+    .rp-toggle {
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        cursor: pointer;
+        text-align: left;
+    }
+
+    .rp-toggle-label {
+        font-family: 'DM Mono', monospace;
+        font-size: 0.68rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #ff8c32;
+    }
+
+    .rp-arrow {
+        margin-left: auto;
+        font-size: 0.7rem;
+        color: #504840;
+        transition: transform 0.2s;
+    }
+
+    .rp-arrow.open {
+        transform: rotate(180deg);
+    }
+
+    .rp-body {
+        padding: 0 1.5rem 1.2rem;
+        font-size: 0.88rem;
+        line-height: 1.75;
+        color: #cdc8bf;
+        white-space: pre-wrap;
+        font-family: 'DM Sans', sans-serif;
+        display: none;
+    }
+
+    .rp-body.open {
+        display: block;
+    }
+
+    .report-panel {
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba(255, 140, 50, 0.2);
+        border-radius: 16px;
+        padding: 2rem 2.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .panel-label-orange {
+        font-family: 'DM Mono', monospace;
+        font-size: 0.68rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #ff8c32;
+        margin-bottom: 1rem;
+        padding-bottom: 0.7rem;
+        border-bottom: 1px solid rgba(255, 140, 50, 0.15);
+    }
+
+    .report-content {
+        font-size: 0.93rem;
+        line-height: 1.8;
+        color: #cdc8bf;
+    }
+
+    .report-content h1,
+    .report-content h2,
+    .report-content h3 {
+        font-family: 'Syne', sans-serif;
+        color: #f0ebe0;
+        margin: 1.2rem 0 0.5rem;
+    }
+
+    .report-content h1 {
+        font-size: 1.4rem;
+    }
+
+    .report-content h2 {
+        font-size: 1.15rem;
+    }
+
+    .report-content h3 {
+        font-size: 1rem;
+    }
+
+    .report-content p {
+        margin-bottom: 0.8rem;
+    }
+
+    .report-content ul,
+    .report-content ol {
+        padding-left: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .report-content li {
+        margin-bottom: 0.3rem;
+    }
+
+    .report-content strong {
+        color: #e8e4dc;
+    }
+
+    .report-content code {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        padding: 0.1rem 0.4rem;
+        font-family: 'DM Mono', monospace;
+        font-size: 0.85em;
+    }
+
+    .feedback-panel {
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba(80, 200, 120, 0.2);
+        border-radius: 16px;
+        padding: 2rem 2.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .panel-label-green {
+        font-family: 'DM Mono', monospace;
+        font-size: 0.68rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #50c878;
+        margin-bottom: 1rem;
+        padding-bottom: 0.7rem;
+        border-bottom: 1px solid rgba(80, 200, 120, 0.15);
+    }
+
+    .download-btn {
+        background: rgba(255, 140, 50, 0.1);
+        border: 1px solid rgba(255, 140, 50, 0.3);
+        color: #ff8c32;
+        font-family: 'Syne', sans-serif;
+        font-weight: 700;
+        font-size: 0.85rem;
+        padding: 0.6rem 1.4rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.2s;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 1rem;
+    }
+
+    .download-btn:hover {
+        background: rgba(255, 140, 50, 0.18);
+    }
+
+    .notice {
+        text-align: center;
+        margin-top: 3rem;
+        font-family: 'DM Mono', monospace;
+        font-size: 0.68rem;
+        color: #403830;
+        letter-spacing: 0.08em;
+    }
+
+    .warning-box {
+        background: rgba(255, 100, 50, 0.08);
+        border: 1px solid rgba(255, 100, 50, 0.2);
+        border-radius: 10px;
+        padding: 0.7rem 1rem;
+        font-size: 0.83rem;
+        color: #ff8060;
+        margin-bottom: 1rem;
+        display: none;
+    }
+
+    .warning-box.show {
+        display: block;
+    }
+
+    .progress-log {
+        font-family: 'DM Mono', monospace;
+        font-size: 0.72rem;
+        color: #504840;
+        margin-top: 0.8rem;
+        letter-spacing: 0.05em;
+        min-height: 1.2rem;
+        transition: color 0.3s;
+    }
+
+    .progress-log.active {
+        color: #ff8c32;
+    }
+</style>
+
+<div class="rm-root">
+    <h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">ResearchMind
+        — AI multi-agent research pipeline</h2>
+
+    <div class="hero">
+        <div class="eyebrow">Multi-Agent AI System</div>
+        <h1>Research<span>Mind</span></h1>
+        <p class="hero-sub">Four specialized AI agents collaborate — searching, scraping, writing, and critiquing — to
+            deliver a polished research report on any topic.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="main-grid">
+        <div>
+            <div class="input-card">
+                <label class="input-label" for="topic-input">Research Topic</label>
+                <input class="topic-input" id="topic-input" type="text"
+                    placeholder="e.g. Quantum computing breakthroughs in 2025" />
+                <div class="warning-box" id="warn-box">Please enter a research topic first.</div>
+                <button class="run-btn" id="run-btn">⚡ Run Research Pipeline</button>
+                <div class="examples">
+                    <span class="ex-label">TRY →</span>
+                    <span class="ex-chip" onclick="fillExample('LLM agents 2025')">LLM agents 2025</span>
+                    <span class="ex-chip" onclick="fillExample('CRISPR gene editing')">CRISPR gene editing</span>
+                    <span class="ex-chip" onclick="fillExample('Fusion energy progress')">Fusion energy progress</span>
+                </div>
+            </div>
+            <div class="progress-log" id="progress-log"></div>
+        </div>
+
+        <div>
+            <div class="section-heading">Pipeline</div>
+            <div id="step-search" class="step-card">
+                <div class="step-header">
+                    <span class="step-num">01</span>
+                    <span class="step-title">Search Agent</span>
+                    <span class="step-status s-waiting" id="ss-search">WAITING</span>
+                </div>
+                <div class="step-desc">Gathers recent web information</div>
+            </div>
+            <div id="step-reader" class="step-card">
+                <div class="step-header">
+                    <span class="step-num">02</span>
+                    <span class="step-title">Reader Agent</span>
+                    <span class="step-status s-waiting" id="ss-reader">WAITING</span>
+                </div>
+                <div class="step-desc">Scrapes &amp; extracts deep content</div>
+            </div>
+            <div id="step-writer" class="step-card">
+                <div class="step-header">
+                    <span class="step-num">03</span>
+                    <span class="step-title">Writer Chain</span>
+                    <span class="step-status s-waiting" id="ss-writer">WAITING</span>
+                </div>
+                <div class="step-desc">Drafts the full research report</div>
+            </div>
+            <div id="step-critic" class="step-card">
+                <div class="step-header">
+                    <span class="step-num">04</span>
+                    <span class="step-title">Critic Chain</span>
+                    <span class="step-status s-waiting" id="ss-critic">WAITING</span>
+                </div>
+                <div class="step-desc">Reviews &amp; scores the report</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="results-area" style="display:none;">
+        <div class="divider"></div>
+        <div class="results-section">
+            <div class="section-heading">Results</div>
+
+            <div id="search-expander" class="result-panel" style="display:none;">
+                <button class="rp-toggle" onclick="togglePanel('search-body','search-arrow')">
+                    <span class="rp-toggle-label">Search Results (raw)</span>
+                    <span class="rp-arrow" id="search-arrow">▼</span>
+                </button>
+                <div class="rp-body" id="search-body"></div>
+            </div>
+
+            <div id="reader-expander" class="result-panel" style="display:none;">
+                <button class="rp-toggle" onclick="togglePanel('reader-body','reader-arrow')">
+                    <span class="rp-toggle-label">Scraped Content (raw)</span>
+                    <span class="rp-arrow" id="reader-arrow">▼</span>
+                </button>
+                <div class="rp-body" id="reader-body"></div>
+            </div>
+
+            <div id="report-panel" class="report-panel" style="display:none;">
+                <div class="panel-label-orange">Final Research Report</div>
+                <div class="report-content" id="report-content"></div>
+                <a class="download-btn" id="download-btn" href="#">⬇ Download Report (.md)</a>
+            </div>
+
+            <div id="critic-panel" class="feedback-panel" style="display:none;">
+                <div class="panel-label-green">Critic Feedback</div>
+                <div class="report-content" id="critic-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notice">ResearchMind · Powered by LangChain multi-agent pipeline · Built in HTML/CSS/JS</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+<script>
+    function fillExample(t) {
+        document.getElementById('topic-input').value = t;
+        document.getElementById('warn-box').classList.remove('show');
+    }
+
+    function togglePanel(bodyId, arrowId) {
+        const b = document.getElementById(bodyId);
+        const a = document.getElementById(arrowId);
+        b.classList.toggle('open');
+        a.classList.toggle('open');
+    }
+
+    function setStep(step, state) {
+        const card = document.getElementById('step-' + step);
+        const status = document.getElementById('ss-' + step);
+        card.className = 'step-card';
+        if (state === 'running') {
+            card.classList.add('active');
+            status.className = 'step-status s-running';
+            status.innerHTML = '&#9679; RUNNING';
+        } else if (state === 'done') {
+            card.classList.add('done');
+            status.className = 'step-status s-done';
+            status.textContent = '✓ DONE';
+        } else {
+            status.className = 'step-status s-waiting';
+            status.textContent = 'WAITING';
+        }
+    }
+
+    function setProgress(msg, active) {
+        const el = document.getElementById('progress-log');
+        el.textContent = msg;
+        el.className = 'progress-log' + (active ? ' active' : '');
+    }
+
+    function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+    async function callClaude(systemPrompt, userPrompt) {
+        const resp = await fetch('https://api.anthropic.com/v1/messages', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                model: 'claude-sonnet-4-20250514',
+                max_tokens: 1000,
+                system: systemPrompt,
+                messages: [{ role: 'user', content: userPrompt }]
+            })
+        });
+        const data = await resp.json();
+        return data.content?.map(b => b.text || '').join('') || '';
+    }
+
+    function renderMarkdown(html, text) {
+        if (typeof marked !== 'undefined') {
+            html.innerHTML = marked.parse(text);
+        } else {
+            html.textContent = text;
+        }
+    }
+
+    function setupDownload(content, topic) {
+        const btn = document.getElementById('download-btn');
+        const blob = new Blob([content], { type: 'text/markdown' });
+        const url = URL.createObjectURL(blob);
+        btn.href = url;
+        btn.download = 'research_report_' + topic.replace(/\s+/g, '_').toLowerCase().slice(0, 40) + '.md';
+    }
+
+    async function runPipeline() {
+        const topic = document.getElementById('topic-input').value.trim();
+        if (!topic) {
+            document.getElementById('warn-box').classList.add('show');
+            return;
+        }
+        document.getElementById('warn-box').classList.remove('show');
+
+        const btn = document.getElementById('run-btn');
+        btn.disabled = true;
+        document.getElementById('results-area').style.display = 'none';
+        ['search', 'reader', 'writer', 'critic'].forEach(s => setStep(s, 'waiting'));
+
+        let searchResult = '', readerResult = '', writerResult = '', criticResult = '';
+
+        try {
+            // Step 1: Search
+            setStep('search', 'running');
+            setProgress('Search Agent scanning the web...', true);
+            searchResult = await callClaude(
+                'You are a search agent. When given a topic, simulate finding 5 recent, high-quality web sources about it. List each source with a title, URL (realistic but invented), and a 2-3 sentence summary of what you found. Be specific and detailed. Format clearly.',
+                'Find recent, reliable and detailed information about: ' + topic
+            );
+            setStep('search', 'done');
+
+            document.getElementById('search-expander').style.display = 'block';
+            document.getElementById('search-body').textContent = searchResult;
+
+            // Step 2: Reader
+            setStep('reader', 'running');
+            setProgress('Reader Agent scraping top resources...', true);
+            readerResult = await callClaude(
+                'You are a web reader/scraper agent. Given search results, pick the most relevant source and simulate deeply scraping its content. Return detailed, structured content as if extracted from that page — key facts, statistics, expert quotes, methodology, findings. Be thorough and specific.',
+                'Based on these search results about "' + topic + '", pick the most relevant source and extract deep content:\n\n' + searchResult.slice(0, 800)
+            );
+            setStep('reader', 'done');
+
+            document.getElementById('reader-expander').style.display = 'block';
+            document.getElementById('reader-body').textContent = readerResult;
+
+            // Step 3: Writer
+            setStep('writer', 'running');
+            setProgress('Writer Chain drafting the report...', true);
+            writerResult = await callClaude(
+                'You are an expert research writer. Given a topic and research data, write a comprehensive, well-structured research report in Markdown. Include: an executive summary, key findings, detailed analysis sections, statistics, implications, and a conclusion. Use proper Markdown headings (##, ###), bullet lists, and bold for key terms. The report should be thorough, informative, and professional.',
+                'Write a comprehensive research report about: ' + topic + '\n\nSEARCH RESULTS:\n' + searchResult + '\n\nDETAILED CONTENT:\n' + readerResult
+            );
+            setStep('writer', 'done');
+
+            document.getElementById('report-panel').style.display = 'block';
+            renderMarkdown(document.getElementById('report-content'), writerResult);
+            setupDownload(writerResult, topic);
+
+            // Step 4: Critic
+            setStep('critic', 'running');
+            setProgress('Critic Chain reviewing the report...', true);
+            criticResult = await callClaude(
+                'You are a rigorous research critic and editor. Review the provided research report and give structured feedback. Score it out of 10 on: Accuracy, Depth, Clarity, and Structure. Highlight strengths, identify weaknesses, suggest specific improvements, and give an overall verdict. Use Markdown for formatting.',
+                'Critically review this research report and provide detailed feedback:\n\n' + writerResult
+            );
+            setStep('critic', 'done');
+
+            document.getElementById('critic-panel').style.display = 'block';
+            renderMarkdown(document.getElementById('critic-content'), criticResult);
+
+            document.getElementById('results-area').style.display = 'block';
+            setProgress('Pipeline complete.', false);
+
+        } catch (err) {
+            setProgress('Error: ' + (err.message || 'Something went wrong.'), false);
+            console.error(err);
+        }
+
+        btn.disabled = false;
+    }
+
+    document.getElementById('run-btn').addEventListener('click', runPipeline);
+    document.getElementById('topic-input').addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') runPipeline();
+    });
+</script>
