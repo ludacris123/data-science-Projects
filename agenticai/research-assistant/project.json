@@ -1,0 +1,9 @@
+{
+  "id": "research-assistant",
+  "category": "agenticai",
+  "title": "Autonomous Research Assistant",
+  "description": "Bounded LangGraph plan \u2192 search \u2192 synthesize workflow, Tavily evidence, report citations, streamed execution steps and PDF export. OPENAI_API_KEY and TAVILY_API_KEY required. Execution events do not expose private model reasoning.",
+  "sample": {
+    "query": "Research practical methods to evaluate retrieval augmented generation"
+  }
+}

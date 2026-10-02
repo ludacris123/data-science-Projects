@@ -1,0 +1,9 @@
+{
+  "id": "shopping-agent",
+  "category": "agenticai",
+  "title": "E-commerce Shopping Agent",
+  "description": "LangGraph search/compare and optional BrowserBase/Playwright page extraction when product_urls is supplied. Configure browser keys and allowed hosts. No Stripe checkout, purchases or scheduled price monitoring.",
+  "sample": {
+    "query": "Compare laptops under USD 1000 with 16 GB RAM"
+  }
+}

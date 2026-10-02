@@ -1,0 +1,31 @@
+{
+  "id": "sports-analytics-hub",
+  "category": "dataanalyst",
+  "title": "Sports Performance Hub",
+  "description": "Player comparison radar, per-match statistics and optional logistic win probability from supplied labeled match states. Optional configured CSV sports feed. No bundled Cricbuzz/ESPN credentials or historical training data.",
+  "sample": {
+    "rows": [
+      {
+        "player": "Player A",
+        "runs": 800,
+        "balls": 600,
+        "wickets": 4,
+        "matches": 20
+      },
+      {
+        "player": "Player B",
+        "runs": 500,
+        "balls": 400,
+        "wickets": 20,
+        "matches": 20
+      },
+      {
+        "player": "Player C",
+        "runs": 600,
+        "balls": 550,
+        "wickets": 12,
+        "matches": 20
+      }
+    ]
+  }
+}

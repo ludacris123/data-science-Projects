@@ -1,0 +1,11 @@
+.env
+models/
+**/node_modules/
+**/dist/
+**/__pycache__/
+.pytest_cache/
+*.sqlite3
+chroma-data/
+mlruns/
+mlartifacts/
+*.db

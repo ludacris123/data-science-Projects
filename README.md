@@ -3,6 +3,14 @@
 A practical collection of data science and machine-learning work by **Rishabh Patel**.  
 This repository documents my progress from data exploration and visualization to predictive modelling and AI applications.
 
+## Full-stack AI and Analytics Portfolio
+
+Explore [18 categorized projects](PROJECTS.md) with FastAPI APIs and a shared React dashboard. See [setup and implementation status](PORTFOLIO.md).
+
+Categories: `datascience/`, `dataanalyst/`, `ml/`, `deeplearning/`, `genai/`, `agenticai/`.
+
+TensorFlow/Keras is used for local neural models. Some workflows require trained artifacts, external data or API keys. These are portfolio prototypes; individual READMEs list missing features.
+
 ## Featured Projects
 
 | Project | What it demonstrates | Key outputs |

@@ -1,0 +1,10 @@
+{
+  "id": "interior-design-studio",
+  "category": "genai",
+  "title": "AI Interior Design Studio",
+  "description": "Replicate prediction submission and status polling. Configure REPLICATE_API_TOKEN, REPLICATE_MODEL_VERSION and the selected model image input field. Requires a ControlNet-compatible hosted model.",
+  "sample": {
+    "image_base64": "REPLACE_WITH_BASE64",
+    "style": "modern"
+  }
+}

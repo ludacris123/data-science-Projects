@@ -1,0 +1,15 @@
+{
+  "id": "visual-search-engine",
+  "category": "ml",
+  "title": "Visual Search Engine",
+  "description": "TensorFlow EfficientNet image embeddings and FAISS cosine index. `query` or `encoder: clip` enables TensorFlow/KerasHub CLIP for text/image matching. Preset weights download on first use; those downloads are not bundled or live-tested.",
+  "sample": {
+    "image_base64": "REPLACE_WITH_BASE64",
+    "catalog": [
+      {
+        "id": "shoe-1",
+        "image_base64": "REPLACE_WITH_BASE64"
+      }
+    ]
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "id": "streaming-content-insights",
+  "category": "dataanalyst",
+  "title": "Streaming Content Insights",
+  "description": "DuckDB genre aggregates and runtime/rating correlations. Optional CSV source ingestion. Embedded Superset, cast analysis and statistical hit-show models remain extensions.",
+  "sample": {
+    "rows": [
+      {
+        "title": "Demo 0",
+        "genre": "Drama",
+        "runtime": 80,
+        "rating": 5,
+        "year": 2020
+      },
+      {
+        "title": "Demo 1",
+        "genre": "Comedy",
+        "runtime": 82,
+        "rating": 6,
+        "year": 2021
+      },
+      {
+        "title": "Demo 2",
+        "genre": "Documentary",
+        "runtime": 84,
+        "rating": 7,
+        "year": 2022
+      },
+      {
+        "title": "Demo 3",
+        "genre": "Drama",
+        "runtime": 86,
+        "rating": 8,
+        "year": 2023
+      },
+      {
+        "title": "Demo 4",
+        "genre": "Comedy",
+        "runtime": 88,
+        "rating": 9,
+        "year": 2024
+      },
+      {
+        "title": "Demo 5",
+        "genre": "Documentary",
+        "runtime": 90,
+        "rating": 5,
+        "year": 2025
+      },
+      {
+        "title": "Demo 6",
+        "genre": "Drama",
+        "runtime": 92,
+        "rating": 6,
+        "year": 2020
+      },
+      {
+        "title": "Demo 7",
+        "genre": "Comedy",
+        "runtime": 94,
+        "rating": 7,
+        "year": 2021
+      },
+      {
+        "title": "Demo 8",
+        "genre": "Documentary",
+        "runtime": 96,
+        "rating": 8,
+        "year": 2022
+      },
+      {
+        "title": "Demo 9",
+        "genre": "Drama",
+        "runtime": 98,
+        "rating": 9,
+        "year": 2023
+      },
+      {
+        "title": "Demo 10",
+        "genre": "Comedy",
+        "runtime": 100,
+        "rating": 5,
+        "year": 2024
+      },
+      {
+        "title": "Demo 11",
+        "genre": "Documentary",
+        "runtime": 102,
+        "rating": 6,
+        "year": 2025
+      },
+      {
+        "title": "Demo 12",
+        "genre": "Drama",
+        "runtime": 104,
+        "rating": 7,
+        "year": 2020
+      },
+      {
+        "title": "Demo 13",
+        "genre": "Comedy",
+        "runtime": 106,
+        "rating": 8,
+        "year": 2021
+      },
+      {
+        "title": "Demo 14",
+        "genre": "Documentary",
+        "runtime": 108,
+        "rating": 9,
+        "year": 2022
+      },
+      {
+        "title": "Demo 15",
+        "genre": "Drama",
+        "runtime": 110,
+        "rating": 5,
+        "year": 2023
+      },
+      {
+        "title": "Demo 16",
+        "genre": "Comedy",
+        "runtime": 112,
+        "rating": 6,
+        "year": 2024
+      },
+      {
+        "title": "Demo 17",
+        "genre": "Documentary",
+        "runtime": 114,
+        "rating": 7,
+        "year": 2025
+      },
+      {
+        "title": "Demo 18",
+        "genre": "Drama",
+        "runtime": 116,
+        "rating": 8,
+        "year": 2020
+      },
+      {
+        "title": "Demo 19",
+        "genre": "Comedy",
+        "runtime": 118,
+        "rating": 9,
+        "year": 2021
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "podcast-summarizer",
+  "category": "genai",
+  "title": "Podcast Summarizer and Q&A",
+  "description": "Hosted Whisper, chunked summaries, headings and show notes, excerpt-grounded Q&A. Optional `retrieval: chroma` persists dense retrieval. Timestamped chapter generation remains an extension.",
+  "sample": {
+    "transcript": "Today we discussed how retrieval augmented generation retrieves source documents before generating an answer. Evaluation uses a held-out set of questions and checks correctness and groundedness."
+  }
+}

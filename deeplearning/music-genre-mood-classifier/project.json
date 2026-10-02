@@ -1,0 +1,9 @@
+{
+  "id": "music-genre-mood-classifier",
+  "category": "deeplearning",
+  "title": "Music Genre and Mood Classifier",
+  "description": "Librosa mel spectrograms and TensorFlow CNN. Train on NPZ arrays; labels may be genres or moods. A single classifier returns the labels it was trained on; separate genre/mood heads and playlist providers remain extensions.",
+  "sample": {
+    "audio_base64": "REPLACE_WITH_BASE64"
+  }
+}

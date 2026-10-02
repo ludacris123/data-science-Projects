@@ -1,0 +1,277 @@
+{
+  "id": "customer-segmentation-dashboard",
+  "category": "datascience",
+  "title": "Customer Segmentation Dashboard",
+  "description": "RFM, K-Means/DBSCAN, segment profiles, cohort retention and CSV export. Optional PostgreSQL run history via DATABASE_URL. Frontend uses shared tables and charts; a dedicated segment filter UI remains an extension.",
+  "sample": {
+    "rows": [
+      {
+        "customer_id": "C1",
+        "date": "2026-06-15",
+        "amount": 180
+      },
+      {
+        "customer_id": "C1",
+        "date": "2026-07-15",
+        "amount": 190
+      },
+      {
+        "customer_id": "C2",
+        "date": "2026-05-15",
+        "amount": 190
+      },
+      {
+        "customer_id": "C2",
+        "date": "2026-06-15",
+        "amount": 200
+      },
+      {
+        "customer_id": "C2",
+        "date": "2026-08-15",
+        "amount": 220
+      },
+      {
+        "customer_id": "C3",
+        "date": "2026-05-15",
+        "amount": 210
+      },
+      {
+        "customer_id": "C3",
+        "date": "2026-07-15",
+        "amount": 230
+      },
+      {
+        "customer_id": "C3",
+        "date": "2026-08-15",
+        "amount": 240
+      },
+      {
+        "customer_id": "C4",
+        "date": "2026-06-15",
+        "amount": 240
+      },
+      {
+        "customer_id": "C4",
+        "date": "2026-07-15",
+        "amount": 250
+      },
+      {
+        "customer_id": "C5",
+        "date": "2026-05-15",
+        "amount": 250
+      },
+      {
+        "customer_id": "C5",
+        "date": "2026-06-15",
+        "amount": 260
+      },
+      {
+        "customer_id": "C5",
+        "date": "2026-08-15",
+        "amount": 280
+      },
+      {
+        "customer_id": "C6",
+        "date": "2026-05-15",
+        "amount": 270
+      },
+      {
+        "customer_id": "C6",
+        "date": "2026-07-15",
+        "amount": 290
+      },
+      {
+        "customer_id": "C6",
+        "date": "2026-08-15",
+        "amount": 300
+      },
+      {
+        "customer_id": "C7",
+        "date": "2026-06-15",
+        "amount": 300
+      },
+      {
+        "customer_id": "C7",
+        "date": "2026-07-15",
+        "amount": 310
+      },
+      {
+        "customer_id": "C8",
+        "date": "2026-05-15",
+        "amount": 310
+      },
+      {
+        "customer_id": "C8",
+        "date": "2026-06-15",
+        "amount": 320
+      },
+      {
+        "customer_id": "C8",
+        "date": "2026-08-15",
+        "amount": 340
+      },
+      {
+        "customer_id": "C9",
+        "date": "2026-05-15",
+        "amount": 330
+      },
+      {
+        "customer_id": "C9",
+        "date": "2026-07-15",
+        "amount": 350
+      },
+      {
+        "customer_id": "C9",
+        "date": "2026-08-15",
+        "amount": 360
+      },
+      {
+        "customer_id": "C10",
+        "date": "2026-06-15",
+        "amount": 360
+      },
+      {
+        "customer_id": "C10",
+        "date": "2026-07-15",
+        "amount": 370
+      },
+      {
+        "customer_id": "C11",
+        "date": "2026-05-15",
+        "amount": 370
+      },
+      {
+        "customer_id": "C11",
+        "date": "2026-06-15",
+        "amount": 380
+      },
+      {
+        "customer_id": "C11",
+        "date": "2026-08-15",
+        "amount": 400
+      },
+      {
+        "customer_id": "C12",
+        "date": "2026-05-15",
+        "amount": 390
+      },
+      {
+        "customer_id": "C12",
+        "date": "2026-07-15",
+        "amount": 410
+      },
+      {
+        "customer_id": "C12",
+        "date": "2026-08-15",
+        "amount": 420
+      },
+      {
+        "customer_id": "C13",
+        "date": "2026-06-15",
+        "amount": 420
+      },
+      {
+        "customer_id": "C13",
+        "date": "2026-07-15",
+        "amount": 430
+      },
+      {
+        "customer_id": "C14",
+        "date": "2026-05-15",
+        "amount": 430
+      },
+      {
+        "customer_id": "C14",
+        "date": "2026-06-15",
+        "amount": 440
+      },
+      {
+        "customer_id": "C14",
+        "date": "2026-08-15",
+        "amount": 460
+      },
+      {
+        "customer_id": "C15",
+        "date": "2026-05-15",
+        "amount": 450
+      },
+      {
+        "customer_id": "C15",
+        "date": "2026-07-15",
+        "amount": 470
+      },
+      {
+        "customer_id": "C15",
+        "date": "2026-08-15",
+        "amount": 480
+      },
+      {
+        "customer_id": "C16",
+        "date": "2026-06-15",
+        "amount": 480
+      },
+      {
+        "customer_id": "C16",
+        "date": "2026-07-15",
+        "amount": 490
+      },
+      {
+        "customer_id": "C17",
+        "date": "2026-05-15",
+        "amount": 490
+      },
+      {
+        "customer_id": "C17",
+        "date": "2026-06-15",
+        "amount": 500
+      },
+      {
+        "customer_id": "C17",
+        "date": "2026-08-15",
+        "amount": 520
+      },
+      {
+        "customer_id": "C18",
+        "date": "2026-05-15",
+        "amount": 510
+      },
+      {
+        "customer_id": "C18",
+        "date": "2026-07-15",
+        "amount": 530
+      },
+      {
+        "customer_id": "C18",
+        "date": "2026-08-15",
+        "amount": 540
+      },
+      {
+        "customer_id": "C19",
+        "date": "2026-06-15",
+        "amount": 540
+      },
+      {
+        "customer_id": "C19",
+        "date": "2026-07-15",
+        "amount": 550
+      },
+      {
+        "customer_id": "C20",
+        "date": "2026-05-15",
+        "amount": 550
+      },
+      {
+        "customer_id": "C20",
+        "date": "2026-06-15",
+        "amount": 560
+      },
+      {
+        "customer_id": "C20",
+        "date": "2026-08-15",
+        "amount": 580
+      }
+    ],
+    "algorithm": "kmeans",
+    "clusters": 3
+  }
+}

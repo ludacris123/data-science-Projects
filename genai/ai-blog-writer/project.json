@@ -1,0 +1,17 @@
+{
+  "id": "ai-blog-writer",
+  "category": "genai",
+  "title": "AI Blog Writer with RAG",
+  "description": "Chunked RAG with default TF-IDF; `retrieval: pinecone` or `chroma` enables OpenAI dense embeddings and vector storage. Pinecone requires a provisioned 1536-dimensional cosine vector index and PINECONE_INDEX_HOST. Keys required. Token streaming remains an extension.",
+  "sample": {
+    "topic": "Customer retention",
+    "tone": "professional",
+    "words": 500,
+    "documents": [
+      {
+        "name": "retention.txt",
+        "text": "Customer retention can be improved by resolving support issues quickly and monitoring usage patterns. Evaluate retention initiatives through controlled experiments."
+      }
+    ]
+  }
+}

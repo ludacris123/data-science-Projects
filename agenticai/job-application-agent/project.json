@@ -1,0 +1,10 @@
+{
+  "id": "job-application-agent",
+  "category": "agenticai",
+  "title": "AI Job Application Agent",
+  "description": "LangGraph job search, fit assessment and tailored cover-letter drafts; local application tracker. Keys required. No automated application submission or LinkedIn/Indeed browser login. CrewAI and Playwright are not implemented.",
+  "sample": {
+    "query": "Find junior Python FastAPI roles in India",
+    "resume": "Frontend developer with React, Python, SQL, FastAPI and RAG experience."
+  }
+}

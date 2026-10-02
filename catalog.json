@@ -1,0 +1,92 @@
+[
+  {
+    "category": "datascience",
+    "id": "disease-outbreak-predictor",
+    "title": "Disease Outbreak Predictor"
+  },
+  {
+    "category": "datascience",
+    "id": "customer-segmentation-dashboard",
+    "title": "Customer Segmentation Dashboard"
+  },
+  {
+    "category": "datascience",
+    "id": "stock-sentiment-analyzer",
+    "title": "Stock Sentiment Analyzer"
+  },
+  {
+    "category": "dataanalyst",
+    "id": "personal-finance-platform",
+    "title": "Personal Finance Analytics"
+  },
+  {
+    "category": "dataanalyst",
+    "id": "streaming-content-insights",
+    "title": "Streaming Content Insights"
+  },
+  {
+    "category": "dataanalyst",
+    "id": "sports-analytics-hub",
+    "title": "Sports Performance Hub"
+  },
+  {
+    "category": "ml",
+    "id": "real-estate-predictor",
+    "title": "Real Estate Price Predictor"
+  },
+  {
+    "category": "ml",
+    "id": "customer-churn-saas",
+    "title": "Customer Churn Prediction"
+  },
+  {
+    "category": "ml",
+    "id": "visual-search-engine",
+    "title": "Visual Search Engine"
+  },
+  {
+    "category": "deeplearning",
+    "id": "medical-image-classifier",
+    "title": "Medical Image Classifier"
+  },
+  {
+    "category": "deeplearning",
+    "id": "sign-language-translator",
+    "title": "Sign Language Translator"
+  },
+  {
+    "category": "deeplearning",
+    "id": "music-genre-mood-classifier",
+    "title": "Music Genre and Mood Classifier"
+  },
+  {
+    "category": "genai",
+    "id": "ai-blog-writer",
+    "title": "AI Blog Writer with RAG"
+  },
+  {
+    "category": "genai",
+    "id": "interior-design-studio",
+    "title": "AI Interior Design Studio"
+  },
+  {
+    "category": "genai",
+    "id": "podcast-summarizer",
+    "title": "Podcast Summarizer and Q&A"
+  },
+  {
+    "category": "agenticai",
+    "id": "research-assistant",
+    "title": "Autonomous Research Assistant"
+  },
+  {
+    "category": "agenticai",
+    "id": "job-application-agent",
+    "title": "AI Job Application Agent"
+  },
+  {
+    "category": "agenticai",
+    "id": "shopping-agent",
+    "title": "E-commerce Shopping Agent"
+  }
+]

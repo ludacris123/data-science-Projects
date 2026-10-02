@@ -1,0 +1,6 @@
+-r requirements.txt
+tensorflow>=2.16,<3
+librosa>=0.10,<1
+pillow>=10,<13
+keras-hub>=0.22,<1
+faiss-cpu>=1.9,<2

@@ -1,0 +1,9 @@
+{
+  "id": "medical-image-classifier",
+  "category": "deeplearning",
+  "title": "Medical Image Classifier",
+  "description": "TensorFlow EfficientNet transfer learning, trained-artifact loading and Grad-CAM. Train on train/val/test directories; split by patient. No pretrained clinical weights bundled; model accuracy and clinical validity are unestablished.",
+  "sample": {
+    "image_base64": "REPLACE_WITH_BASE64"
+  }
+}

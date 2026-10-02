@@ -1,0 +1,29 @@
+{
+  "id": "personal-finance-platform",
+  "category": "dataanalyst",
+  "title": "Personal Finance Analytics",
+  "description": "CSV: date, description, amount. Positive amounts are income; negative amounts are expenses. Rule categorization, monthly budget comparison, net cashflow, PDF and CSV export.",
+  "sample": {
+    "rows": [
+      {
+        "date": "2026-08-01",
+        "description": "Salary payroll",
+        "amount": 50000
+      },
+      {
+        "date": "2026-08-02",
+        "description": "Monthly rent",
+        "amount": -12000
+      },
+      {
+        "date": "2026-08-03",
+        "description": "Grocery supermarket",
+        "amount": -3000
+      }
+    ],
+    "budgets": {
+      "rent": 15000,
+      "groceries": 5000
+    }
+  }
+}
