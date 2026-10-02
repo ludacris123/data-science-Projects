@@ -1,0 +1,17 @@
+{
+  "name": "@rishabh/visual-search-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@rishabh/portfolio-ui": "*"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

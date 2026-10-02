@@ -19,12 +19,8 @@ def main():
         labels=train.class_names
         val=tf.keras.utils.image_dataset_from_directory(root/'val',class_names=labels,image_size=(224,224),batch_size=16,shuffle=False)
         test=tf.keras.utils.image_dataset_from_directory(root/'test',class_names=labels,image_size=(224,224),batch_size=16,shuffle=False)
-        inputs=tf.keras.Input((224,224,3))
-        base=tf.keras.applications.EfficientNetB0(include_top=False,weights='imagenet',input_shape=(224,224,3)); base.trainable=False
-        x=base(inputs,training=False)
-        x=tf.keras.layers.Conv2D(128,1,activation='relu',name='cam_conv')(x)
-        x=tf.keras.layers.GlobalAveragePooling2D()(x)
-        model=tf.keras.Model(inputs,tf.keras.layers.Dense(len(labels),activation='softmax')(x))
+        from .registry import load_service
+        model=load_service(args.task).build_model(len(labels))
         model.compile(optimizer='adam',loss='sparse_categorical_crossentropy',metrics=['accuracy'])
         model.fit(train,validation_data=val,epochs=args.epochs,callbacks=[tf.keras.callbacks.EarlyStopping(patience=3,restore_best_weights=True)])
         metrics=model.evaluate(test,verbose=0,return_dict=True)
@@ -33,10 +29,8 @@ def main():
         splits=[np.load(root/(s+'.npz')) for s in ['train','val','test']]
         labels=json.loads((root/'labels.json').read_text())
         x,y=splits[0]['x'],splits[0]['y']
-        if args.task=='sign-language-translator':
-            model=tf.keras.Sequential([tf.keras.Input((30,126)),tf.keras.layers.LSTM(64),tf.keras.layers.Dropout(.3),tf.keras.layers.Dense(len(labels),activation='softmax')])
-        else:
-            model=tf.keras.Sequential([tf.keras.Input((128,1292,1)),tf.keras.layers.Conv2D(16,3,activation='relu'),tf.keras.layers.MaxPool2D(),tf.keras.layers.Conv2D(32,3,activation='relu'),tf.keras.layers.GlobalAveragePooling2D(),tf.keras.layers.Dense(len(labels),activation='softmax')])
+        from .registry import load_service
+        model=load_service(args.task).build_model(len(labels))
         model.compile(optimizer='adam',loss='sparse_categorical_crossentropy',metrics=['accuracy'])
         model.fit(x,y,validation_data=(splits[1]['x'],splits[1]['y']),epochs=args.epochs,batch_size=16,callbacks=[tf.keras.callbacks.EarlyStopping(patience=3,restore_best_weights=True)])
         metrics=model.evaluate(splits[2]['x'],splits[2]['y'],verbose=0,return_dict=True)

@@ -1,0 +1,3 @@
+{
+  "transcript": "Today we discussed how retrieval augmented generation retrieves source documents before generating an answer. Evaluation uses a held-out set of questions and checks correctness and groundedness."
+}

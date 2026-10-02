@@ -17,9 +17,8 @@ python run.py medical-image-classifier
 In a second terminal:
 
 ```bash
-cd portfolio-ui
 npm install
-npm run dev
+npm run dev --workspace @rishabh/medical-image-classifier
 ```
 
 API documentation: http://localhost:8000/docs. The UI loads the project metadata and editable sample payload from `/schema`. POST JSON to `/run`; analytics projects also accept UTF-8 CSV uploads. All projects provide `/export/pdf` and `/export/csv`. Synthetic samples are examples, not evidence of real-world accuracy.
@@ -35,3 +34,13 @@ python -m portfolio_core.train medical-image-classifier --data data/medical-imag
 ```
 
 For medical images: `train/<class>/`, `val/<class>/`, `test/<class>/`. For signs/audio: `train.npz`, `val.npz`, `test.npz` with `x` and integer `y`, plus `labels.json`. Sign arrays: `(samples,30,126)`; audio arrays: `(samples,128,1292,1)`. Keep patients/speakers/songs disjoint across splits. See `portfolio_core/train.py`; it exports model, label order and held-out metrics.
+
+## Source files
+
+- `backend/service.py`: this project's business logic.
+- `backend/main.py`: FastAPI application.
+- `backend/run.py`: launch from the project folder.
+- `frontend/src/main.jsx`: runnable React client and project controls.
+- `sample-request.json`: example API request.
+
+From this project folder you can also run `python backend/run.py`. Shared provider, model and transport utilities remain in `portfolio_core/`.

@@ -1,2 +1,5 @@
+"""FastAPI application for Stock Sentiment Analyzer."""
 from portfolio_core.app import create_app
-app = create_app('stock-sentiment-analyzer')
+from portfolio_core.registry import metadata
+
+app = create_app('stock-sentiment-analyzer', metadata('stock-sentiment-analyzer'))

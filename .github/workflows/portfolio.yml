@@ -1,9 +1,9 @@
 name: Portfolio checks
 on:
   push:
-    paths: ['portfolio_core/**', 'portfolio-ui/**', 'tests/**', 'requirements*.txt', '*/**/project.json', '.github/workflows/portfolio.yml']
+    paths: ['portfolio_core/**', 'portfolio-ui/**', 'tests/**', 'requirements*.txt', 'datascience/**', 'dataanalyst/**', 'ml/**', 'deeplearning/**', 'genai/**', 'agenticai/**', 'catalog.json', 'package*.json', '.github/workflows/portfolio.yml']
   pull_request:
-    paths: ['portfolio_core/**', 'portfolio-ui/**', 'tests/**', 'requirements*.txt', '*/**/project.json', '.github/workflows/portfolio.yml']
+    paths: ['portfolio_core/**', 'portfolio-ui/**', 'tests/**', 'requirements*.txt', 'datascience/**', 'dataanalyst/**', 'ml/**', 'deeplearning/**', 'genai/**', 'agenticai/**', 'catalog.json', 'package*.json', '.github/workflows/portfolio.yml']
 permissions:
   contents: read
 jobs:
@@ -28,6 +28,5 @@ jobs:
         with:
           node-version: '22'
           cache: npm
-          cache-dependency-path: portfolio-ui/package-lock.json
+          cache-dependency-path: package-lock.json
       - run: npm ci && npm run build
-        working-directory: portfolio-ui

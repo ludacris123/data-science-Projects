@@ -11,6 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from starlette.concurrency import run_in_threadpool
 from . import analytics, neural, ai
+from .registry import load_service, metadata as project_metadata
 
 SERVICES={**analytics.SERVICES,**neural.SERVICES,**ai.SERVICES}
 MAX_BODY=30_000_000
@@ -18,7 +19,8 @@ MAX_BODY=30_000_000
 
 def create_app(project,metadata=None):
     if project not in SERVICES: raise ValueError('Unknown project')
-    app=FastAPI(title=project,version='0.1.0')
+    metadata=metadata or project_metadata(project)
+    app=FastAPI(title=project,version='0.2.0')
     app.add_middleware(CORSMiddleware,allow_origins=os.environ.get('CORS_ORIGINS','http://localhost:5173').split(','),allow_methods=['GET','POST'],allow_headers=['Content-Type'])
     @app.middleware('http')
     async def limit_body(request,call_next):
@@ -40,7 +42,7 @@ def create_app(project,metadata=None):
             if project=='stock-sentiment-analyzer':
                 existing=await run_in_threadpool(persistence.cached,project,data)
                 if existing:return existing
-            result=await run_in_threadpool(SERVICES[project],data)
+            result=await run_in_threadpool(load_service(project).run,data)
             if os.environ.get('DATABASE_URL'):await run_in_threadpool(persistence.save,project,result)
             if project=='stock-sentiment-analyzer':await run_in_threadpool(persistence.cache,project,data,result)
             return result
@@ -90,7 +92,7 @@ def create_app(project,metadata=None):
             try:
                 query=str(data.get('query',''))
                 if kind=='jobs':query+='\nResume: '+str(data.get('resume',''))[:20000]
-                for update in ai.graph(kind).stream({'query':query},stream_mode='updates'):
+                for update in load_service(project).stream(data):
                     yield 'data: '+json.dumps(update)+'\n\n'
             except Exception:
                 yield 'event: error\ndata: '+json.dumps({'detail':'Agent failed; check provider configuration and logs'})+'\n\n'

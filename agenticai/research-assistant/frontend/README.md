@@ -1,5 +1,12 @@
-# Autonomous Research Assistant React UI
+# Autonomous Research Assistant React frontend
 
-Use the shared React client in `../../../portfolio-ui`. It selects this backend via `/schema` and avoids duplicating 18 copies of the same UI.
+This project owns its Vite entry point and project-specific controls. The reusable dashboard components come from the local `@rishabh/portfolio-ui` workspace package.
 
-From the repository root: `cd portfolio-ui && npm install && npm run dev`.
+From the repository root:
+
+```bash
+npm install
+npm run dev --workspace @rishabh/research-assistant
+```
+
+Start its API with `python run.py research-assistant` in another terminal. Open http://localhost:5173. A mismatched backend is detected before any workflow can run. API keys are configured on the backend only.

@@ -1,0 +1,1091 @@
+{
+  "rows": [
+    {
+      "tenure": 41,
+      "monthly_charges": 131,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 66,
+      "monthly_charges": 49,
+      "support_tickets": 6,
+      "churn": 0
+    },
+    {
+      "tenure": 25,
+      "monthly_charges": 85,
+      "support_tickets": 0,
+      "churn": 0
+    },
+    {
+      "tenure": 56,
+      "monthly_charges": 20,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 69,
+      "monthly_charges": 70,
+      "support_tickets": 5,
+      "churn": 0
+    },
+    {
+      "tenure": 56,
+      "monthly_charges": 37,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 43,
+      "monthly_charges": 100,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 16,
+      "monthly_charges": 96,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 40,
+      "monthly_charges": 124,
+      "support_tickets": 5,
+      "churn": 0
+    },
+    {
+      "tenure": 52,
+      "monthly_charges": 95,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 17,
+      "monthly_charges": 69,
+      "support_tickets": 6,
+      "churn": 1
+    },
+    {
+      "tenure": 49,
+      "monthly_charges": 64,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 39,
+      "monthly_charges": 123,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 1,
+      "monthly_charges": 97,
+      "support_tickets": 4,
+      "churn": 1
+    },
+    {
+      "tenure": 27,
+      "monthly_charges": 130,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 42,
+      "monthly_charges": 139,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 57,
+      "monthly_charges": 74,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 61,
+      "monthly_charges": 63,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 11,
+      "monthly_charges": 92,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 43,
+      "monthly_charges": 43,
+      "support_tickets": 3,
+      "churn": 0
+    },
+    {
+      "tenure": 40,
+      "monthly_charges": 77,
+      "support_tickets": 3,
+      "churn": 0
+    },
+    {
+      "tenure": 19,
+      "monthly_charges": 26,
+      "support_tickets": 0,
+      "churn": 1
+    },
+    {
+      "tenure": 32,
+      "monthly_charges": 141,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 10,
+      "monthly_charges": 136,
+      "support_tickets": 6,
+      "churn": 1
+    },
+    {
+      "tenure": 25,
+      "monthly_charges": 118,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 52,
+      "monthly_charges": 82,
+      "support_tickets": 2,
+      "churn": 0
+    },
+    {
+      "tenure": 1,
+      "monthly_charges": 47,
+      "support_tickets": 6,
+      "churn": 1
+    },
+    {
+      "tenure": 29,
+      "monthly_charges": 65,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 60,
+      "monthly_charges": 32,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 32,
+      "monthly_charges": 51,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 18,
+      "monthly_charges": 138,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 68,
+      "monthly_charges": 101,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 65,
+      "monthly_charges": 129,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 58,
+      "monthly_charges": 60,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 58,
+      "monthly_charges": 86,
+      "support_tickets": 3,
+      "churn": 0
+    },
+    {
+      "tenure": 36,
+      "monthly_charges": 144,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 31,
+      "monthly_charges": 90,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 10,
+      "monthly_charges": 93,
+      "support_tickets": 3,
+      "churn": 1
+    },
+    {
+      "tenure": 35,
+      "monthly_charges": 105,
+      "support_tickets": 5,
+      "churn": 0
+    },
+    {
+      "tenure": 70,
+      "monthly_charges": 40,
+      "support_tickets": 2,
+      "churn": 0
+    },
+    {
+      "tenure": 20,
+      "monthly_charges": 79,
+      "support_tickets": 6,
+      "churn": 0
+    },
+    {
+      "tenure": 20,
+      "monthly_charges": 74,
+      "support_tickets": 1,
+      "churn": 0
+    },
+    {
+      "tenure": 54,
+      "monthly_charges": 124,
+      "support_tickets": 5,
+      "churn": 0
+    },
+    {
+      "tenure": 70,
+      "monthly_charges": 139,
+      "support_tickets": 6,
+      "churn": 0
+    },
+    {
+      "tenure": 8,
+      "monthly_charges": 72,
+      "support_tickets": 6,
+      "churn": 1
+    },
+    {
+      "tenure": 50,
+      "monthly_charges": 25,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 49,
+      "monthly_charges": 142,
+      "support_tickets": 0,
+      "churn": 0
+    },
+    {
+      "tenure": 46,
+      "monthly_charges": 96,
+      "support_tickets": 6,
+      "churn": 0
+    },
+    {
+      "tenure": 54,
+      "monthly_charges": 76,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 29,
+      "monthly_charges": 89,
+      "support_tickets": 6,
+      "churn": 0
+    },
+    {
+      "tenure": 63,
+      "monthly_charges": 27,
+      "support_tickets": 6,
+      "churn": 0
+    },
+    {
+      "tenure": 44,
+      "monthly_charges": 123,
+      "support_tickets": 2,
+      "churn": 0
+    },
+    {
+      "tenure": 60,
+      "monthly_charges": 52,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 69,
+      "monthly_charges": 26,
+      "support_tickets": 6,
+      "churn": 0
+    },
+    {
+      "tenure": 4,
+      "monthly_charges": 41,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 55,
+      "monthly_charges": 54,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 24,
+      "monthly_charges": 32,
+      "support_tickets": 4,
+      "churn": 0
+    },
+    {
+      "tenure": 49,
+      "monthly_charges": 103,
+      "support_tickets": 3,
+      "churn": 0
+    },
+    {
+      "tenure": 59,
+      "monthly_charges": 103,
+      "support_tickets": 5,
+      "churn": 0
+    },
+    {
+      "tenure": 49,
+      "monthly_charges": 91,
+      "support_tickets": 6,
+      "churn": 0
+    },
+    {
+      "tenure": 33,
+      "monthly_charges": 40,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 3,
+      "monthly_charges": 33,
+      "support_tickets": 5,
+      "churn": 1
+    },
+    {
+      "tenure": 29,
+      "monthly_charges": 37,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 6,
+      "monthly_charges": 27,
+      "support_tickets": 3,
+      "churn": 1
+    },
+    {
+      "tenure": 26,
+      "monthly_charges": 25,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 20,
+      "monthly_charges": 81,
+      "support_tickets": 2,
+      "churn": 0
+    },
+    {
+      "tenure": 61,
+      "monthly_charges": 49,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 28,
+      "monthly_charges": 139,
+      "support_tickets": 4,
+      "churn": 0
+    },
+    {
+      "tenure": 48,
+      "monthly_charges": 62,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 15,
+      "monthly_charges": 61,
+      "support_tickets": 4,
+      "churn": 1
+    },
+    {
+      "tenure": 14,
+      "monthly_charges": 26,
+      "support_tickets": 4,
+      "churn": 1
+    },
+    {
+      "tenure": 49,
+      "monthly_charges": 121,
+      "support_tickets": 3,
+      "churn": 0
+    },
+    {
+      "tenure": 10,
+      "monthly_charges": 82,
+      "support_tickets": 1,
+      "churn": 1
+    },
+    {
+      "tenure": 39,
+      "monthly_charges": 50,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 6,
+      "monthly_charges": 108,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 55,
+      "monthly_charges": 114,
+      "support_tickets": 1,
+      "churn": 0
+    },
+    {
+      "tenure": 65,
+      "monthly_charges": 107,
+      "support_tickets": 0,
+      "churn": 0
+    },
+    {
+      "tenure": 54,
+      "monthly_charges": 145,
+      "support_tickets": 1,
+      "churn": 0
+    },
+    {
+      "tenure": 56,
+      "monthly_charges": 112,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 59,
+      "monthly_charges": 59,
+      "support_tickets": 6,
+      "churn": 0
+    },
+    {
+      "tenure": 23,
+      "monthly_charges": 89,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 69,
+      "monthly_charges": 143,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 56,
+      "monthly_charges": 88,
+      "support_tickets": 5,
+      "churn": 0
+    },
+    {
+      "tenure": 32,
+      "monthly_charges": 42,
+      "support_tickets": 4,
+      "churn": 0
+    },
+    {
+      "tenure": 58,
+      "monthly_charges": 82,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 49,
+      "monthly_charges": 106,
+      "support_tickets": 0,
+      "churn": 0
+    },
+    {
+      "tenure": 64,
+      "monthly_charges": 103,
+      "support_tickets": 2,
+      "churn": 0
+    },
+    {
+      "tenure": 63,
+      "monthly_charges": 74,
+      "support_tickets": 5,
+      "churn": 0
+    },
+    {
+      "tenure": 34,
+      "monthly_charges": 107,
+      "support_tickets": 4,
+      "churn": 0
+    },
+    {
+      "tenure": 36,
+      "monthly_charges": 22,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 25,
+      "monthly_charges": 41,
+      "support_tickets": 3,
+      "churn": 0
+    },
+    {
+      "tenure": 53,
+      "monthly_charges": 145,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 31,
+      "monthly_charges": 141,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 63,
+      "monthly_charges": 134,
+      "support_tickets": 0,
+      "churn": 0
+    },
+    {
+      "tenure": 12,
+      "monthly_charges": 95,
+      "support_tickets": 3,
+      "churn": 1
+    },
+    {
+      "tenure": 52,
+      "monthly_charges": 82,
+      "support_tickets": 4,
+      "churn": 0
+    },
+    {
+      "tenure": 48,
+      "monthly_charges": 141,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 68,
+      "monthly_charges": 108,
+      "support_tickets": 6,
+      "churn": 0
+    },
+    {
+      "tenure": 71,
+      "monthly_charges": 104,
+      "support_tickets": 5,
+      "churn": 0
+    },
+    {
+      "tenure": 59,
+      "monthly_charges": 89,
+      "support_tickets": 4,
+      "churn": 0
+    },
+    {
+      "tenure": 33,
+      "monthly_charges": 79,
+      "support_tickets": 1,
+      "churn": 0
+    },
+    {
+      "tenure": 25,
+      "monthly_charges": 100,
+      "support_tickets": 1,
+      "churn": 0
+    },
+    {
+      "tenure": 69,
+      "monthly_charges": 67,
+      "support_tickets": 3,
+      "churn": 0
+    },
+    {
+      "tenure": 28,
+      "monthly_charges": 143,
+      "support_tickets": 4,
+      "churn": 0
+    },
+    {
+      "tenure": 68,
+      "monthly_charges": 92,
+      "support_tickets": 1,
+      "churn": 0
+    },
+    {
+      "tenure": 25,
+      "monthly_charges": 95,
+      "support_tickets": 3,
+      "churn": 0
+    },
+    {
+      "tenure": 47,
+      "monthly_charges": 65,
+      "support_tickets": 4,
+      "churn": 0
+    },
+    {
+      "tenure": 2,
+      "monthly_charges": 52,
+      "support_tickets": 4,
+      "churn": 1
+    },
+    {
+      "tenure": 6,
+      "monthly_charges": 33,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 38,
+      "monthly_charges": 52,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 63,
+      "monthly_charges": 46,
+      "support_tickets": 0,
+      "churn": 0
+    },
+    {
+      "tenure": 37,
+      "monthly_charges": 140,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 57,
+      "monthly_charges": 107,
+      "support_tickets": 2,
+      "churn": 0
+    },
+    {
+      "tenure": 7,
+      "monthly_charges": 84,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 15,
+      "monthly_charges": 36,
+      "support_tickets": 6,
+      "churn": 1
+    },
+    {
+      "tenure": 63,
+      "monthly_charges": 38,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 7,
+      "monthly_charges": 58,
+      "support_tickets": 2,
+      "churn": 1
+    },
+    {
+      "tenure": 39,
+      "monthly_charges": 41,
+      "support_tickets": 3,
+      "churn": 0
+    },
+    {
+      "tenure": 16,
+      "monthly_charges": 126,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 29,
+      "monthly_charges": 117,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 57,
+      "monthly_charges": 96,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 55,
+      "monthly_charges": 98,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 8,
+      "monthly_charges": 45,
+      "support_tickets": 3,
+      "churn": 1
+    },
+    {
+      "tenure": 28,
+      "monthly_charges": 87,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 11,
+      "monthly_charges": 60,
+      "support_tickets": 3,
+      "churn": 1
+    },
+    {
+      "tenure": 23,
+      "monthly_charges": 39,
+      "support_tickets": 2,
+      "churn": 0
+    },
+    {
+      "tenure": 1,
+      "monthly_charges": 124,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 61,
+      "monthly_charges": 94,
+      "support_tickets": 0,
+      "churn": 0
+    },
+    {
+      "tenure": 30,
+      "monthly_charges": 93,
+      "support_tickets": 4,
+      "churn": 0
+    },
+    {
+      "tenure": 59,
+      "monthly_charges": 38,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 30,
+      "monthly_charges": 87,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 26,
+      "monthly_charges": 128,
+      "support_tickets": 1,
+      "churn": 0
+    },
+    {
+      "tenure": 70,
+      "monthly_charges": 77,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 20,
+      "monthly_charges": 88,
+      "support_tickets": 2,
+      "churn": 0
+    },
+    {
+      "tenure": 10,
+      "monthly_charges": 35,
+      "support_tickets": 2,
+      "churn": 1
+    },
+    {
+      "tenure": 40,
+      "monthly_charges": 93,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 16,
+      "monthly_charges": 139,
+      "support_tickets": 4,
+      "churn": 1
+    },
+    {
+      "tenure": 52,
+      "monthly_charges": 89,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 70,
+      "monthly_charges": 146,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 11,
+      "monthly_charges": 30,
+      "support_tickets": 6,
+      "churn": 1
+    },
+    {
+      "tenure": 42,
+      "monthly_charges": 84,
+      "support_tickets": 0,
+      "churn": 0
+    },
+    {
+      "tenure": 12,
+      "monthly_charges": 78,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 3,
+      "monthly_charges": 88,
+      "support_tickets": 9,
+      "churn": 1
+    },
+    {
+      "tenure": 6,
+      "monthly_charges": 64,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 67,
+      "monthly_charges": 133,
+      "support_tickets": 4,
+      "churn": 0
+    },
+    {
+      "tenure": 24,
+      "monthly_charges": 131,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 63,
+      "monthly_charges": 43,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 45,
+      "monthly_charges": 124,
+      "support_tickets": 5,
+      "churn": 0
+    },
+    {
+      "tenure": 42,
+      "monthly_charges": 46,
+      "support_tickets": 2,
+      "churn": 0
+    },
+    {
+      "tenure": 43,
+      "monthly_charges": 125,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 37,
+      "monthly_charges": 122,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 5,
+      "monthly_charges": 136,
+      "support_tickets": 1,
+      "churn": 1
+    },
+    {
+      "tenure": 41,
+      "monthly_charges": 84,
+      "support_tickets": 5,
+      "churn": 0
+    },
+    {
+      "tenure": 15,
+      "monthly_charges": 123,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 1,
+      "monthly_charges": 138,
+      "support_tickets": 6,
+      "churn": 1
+    },
+    {
+      "tenure": 7,
+      "monthly_charges": 68,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 47,
+      "monthly_charges": 147,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 57,
+      "monthly_charges": 33,
+      "support_tickets": 3,
+      "churn": 0
+    },
+    {
+      "tenure": 35,
+      "monthly_charges": 53,
+      "support_tickets": 4,
+      "churn": 0
+    },
+    {
+      "tenure": 57,
+      "monthly_charges": 144,
+      "support_tickets": 1,
+      "churn": 0
+    },
+    {
+      "tenure": 4,
+      "monthly_charges": 81,
+      "support_tickets": 2,
+      "churn": 1
+    },
+    {
+      "tenure": 40,
+      "monthly_charges": 23,
+      "support_tickets": 8,
+      "churn": 1
+    },
+    {
+      "tenure": 53,
+      "monthly_charges": 43,
+      "support_tickets": 3,
+      "churn": 0
+    },
+    {
+      "tenure": 15,
+      "monthly_charges": 138,
+      "support_tickets": 1,
+      "churn": 1
+    },
+    {
+      "tenure": 20,
+      "monthly_charges": 147,
+      "support_tickets": 4,
+      "churn": 0
+    },
+    {
+      "tenure": 66,
+      "monthly_charges": 89,
+      "support_tickets": 6,
+      "churn": 0
+    },
+    {
+      "tenure": 62,
+      "monthly_charges": 140,
+      "support_tickets": 3,
+      "churn": 0
+    },
+    {
+      "tenure": 59,
+      "monthly_charges": 57,
+      "support_tickets": 6,
+      "churn": 0
+    },
+    {
+      "tenure": 25,
+      "monthly_charges": 150,
+      "support_tickets": 2,
+      "churn": 0
+    },
+    {
+      "tenure": 9,
+      "monthly_charges": 90,
+      "support_tickets": 6,
+      "churn": 1
+    },
+    {
+      "tenure": 44,
+      "monthly_charges": 149,
+      "support_tickets": 4,
+      "churn": 0
+    },
+    {
+      "tenure": 1,
+      "monthly_charges": 92,
+      "support_tickets": 4,
+      "churn": 1
+    },
+    {
+      "tenure": 63,
+      "monthly_charges": 58,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 69,
+      "monthly_charges": 143,
+      "support_tickets": 5,
+      "churn": 0
+    },
+    {
+      "tenure": 43,
+      "monthly_charges": 116,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 42,
+      "monthly_charges": 68,
+      "support_tickets": 3,
+      "churn": 0
+    },
+    {
+      "tenure": 50,
+      "monthly_charges": 79,
+      "support_tickets": 6,
+      "churn": 0
+    },
+    {
+      "tenure": 6,
+      "monthly_charges": 101,
+      "support_tickets": 7,
+      "churn": 1
+    },
+    {
+      "tenure": 49,
+      "monthly_charges": 118,
+      "support_tickets": 10,
+      "churn": 1
+    },
+    {
+      "tenure": 20,
+      "monthly_charges": 146,
+      "support_tickets": 0,
+      "churn": 0
+    }
+  ],
+  "customers": [
+    {
+      "tenure": 4,
+      "monthly_charges": 100,
+      "support_tickets": 8
+    }
+  ]
+}

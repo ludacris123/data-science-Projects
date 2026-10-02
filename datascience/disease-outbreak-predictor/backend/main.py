@@ -1,2 +1,5 @@
+"""FastAPI application for Disease Outbreak Predictor."""
 from portfolio_core.app import create_app
-app = create_app('disease-outbreak-predictor')
+from portfolio_core.registry import metadata
+
+app = create_app('disease-outbreak-predictor', metadata('disease-outbreak-predictor'))

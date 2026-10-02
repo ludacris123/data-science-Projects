@@ -1,2 +1,5 @@
+"""FastAPI application for Autonomous Research Assistant."""
 from portfolio_core.app import create_app
-app = create_app('research-assistant')
+from portfolio_core.registry import metadata
+
+app = create_app('research-assistant', metadata('research-assistant'))

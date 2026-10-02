@@ -1,6 +1,6 @@
 # AI and analytics portfolio — Rishabh Patel
 
-18 local full-stack prototypes grouped into `datascience/`, `dataanalyst/`, `ml/`, `deeplearning/`, `genai/`, and `agenticai/`. The common FastAPI runtime lives in `portfolio_core/`; the React dashboard lives in `portfolio-ui/`. Each project folder contains its own metadata, sample input, backend entry point, UI instructions and feature status.
+18 local full-stack prototypes grouped into `datascience/`, `dataanalyst/`, `ml/`, `deeplearning/`, `genai/`, and `agenticai/`. Each project has its own `backend/service.py` business logic and runnable `frontend/src/main.jsx` React client. Reusable FastAPI transport and provider utilities live in `portfolio_core/`; shared React components live in `portfolio-ui/`. Neural model builders and training launchers are in the deep-learning project folders.
 
 See [all projects](PROJECTS.md). Existing repository projects are preserved.
 
@@ -13,7 +13,8 @@ Eight tabular analytical workflows run with included synthetic samples. Four Ten
 ```bash
 pip install -r requirements.txt
 python -m pytest tests -q
-cd portfolio-ui && npm ci && npm run build
+npm ci
+npm run build
 ```
 
 TensorFlow inference, training, live provider calls and clinical/financial accuracy require separate evaluation. Synthetic examples must not be presented as benchmark performance.
@@ -27,3 +28,12 @@ Keep analytics logic separate from HTTP transport. Uploads are bounded. CSV expo
 TensorFlow/Keras replaces PyTorch in the code we train and serve. Visual similarity supports EfficientNet and KerasHub CLIP with a TensorFlow backend. Hosted Whisper and diffusion APIs execute at their provider and do not require a local PyTorch package.
 
 References: https://keras.io/api/applications/efficientnet/efficientnet_models/ and https://reference.langchain.com/python/langgraph/graph/state/StateGraph
+
+## Run a project-specific frontend
+
+```bash
+npm install
+npm run dev --workspace @rishabh/ai-blog-writer
+```
+
+Start its matching API with `python run.py ai-blog-writer`. Repeat with any project ID in PROJECTS.md. The frontend checks that the connected API matches its project.

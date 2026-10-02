@@ -1,0 +1,9 @@
+{
+  "image_base64": "REPLACE_WITH_BASE64",
+  "catalog": [
+    {
+      "id": "shoe-1",
+      "image_base64": "REPLACE_WITH_BASE64"
+    }
+  ]
+}

@@ -25,29 +25,13 @@ def image_array(encoded):
 
 
 def medical(data):
-    import tensorflow as tf
-    model,labels=load_artifact('medical-image-classifier')
-    x=image_array(data['image_base64'])
-    probabilities=model(x,training=False).numpy()[0]
-    # Training model exposes a top-level convolution block for Grad-CAM.
-    layer=model.get_layer('cam_conv')
-    grad_model=tf.keras.Model(model.inputs,[layer.output,model.output])
-    with tf.GradientTape() as tape:
-        convolution,preds=grad_model([x])
-        index=tf.argmax(preds[0]); loss=preds[:,index]
-    gradient=tape.gradient(loss,convolution)
-    weights=tf.reduce_mean(gradient,axis=(0,1,2))
-    heatmap=tf.reduce_sum(convolution[0]*weights,axis=-1)
-    heatmap=tf.maximum(heatmap,0)/(tf.reduce_max(heatmap)+1e-8)
-    return {'probabilities':dict(zip(labels,map(float,probabilities))),'heatmap':heatmap.numpy().tolist(),'label':labels[int(index)],'notice':'Research model. Scores are not calibrated diagnostic probabilities.'}
+    from .registry import load_service
+    return load_service('medical-image-classifier').run(data)
 
 
 def sign(data):
-    model,labels=load_artifact('sign-language-translator')
-    landmarks=np.asarray(data.get('landmarks',[]),dtype='float32')
-    if landmarks.shape!=(30,126): raise ValueError('Expected 30 frames × 126 features (two hands × 21 landmarks × xyz)')
-    probabilities=model(landmarks[None,...],training=False).numpy()[0]
-    return {'word':labels[int(np.argmax(probabilities))], 'probabilities':dict(zip(labels,map(float,probabilities)))}
+    from .registry import load_service
+    return load_service('sign-language-translator').run(data)
 
 
 def audio_features(raw):
@@ -62,12 +46,8 @@ def audio_features(raw):
 
 
 def music(data):
-    raw=base64.b64decode(data['audio_base64'],validate=True)
-    if len(raw)>20_000_000: raise ValueError('Audio limit: 20 MB')
-    model,labels=load_artifact('music-genre-mood-classifier')
-    features=audio_features(raw)
-    probabilities=model(features,training=False).numpy()[0]
-    return {'label':labels[int(np.argmax(probabilities))],'probabilities':dict(zip(labels,map(float,probabilities))),'spectrogram':features[0,::4,::16,0].tolist()}
+    from .registry import load_service
+    return load_service('music-genre-mood-classifier').run(data)
 
 
 @lru_cache(maxsize=2)
@@ -80,30 +60,7 @@ def image_encoder(kind):
 
 
 def visual(data):
-    import faiss
-    catalog=data.get('catalog',[])
-    if not 1<=len(catalog)<=30: raise ValueError('Provide 1–30 catalog images')
-    images=np.concatenate([image_array(i['image_base64']) for i in catalog])
-    use_clip=bool(data.get('query')) or data.get('encoder')=='clip'
-    if use_clip:
-        import tensorflow as tf
-        model,preprocessor=image_encoder('clip')
-        processed=preprocessor({'prompts':['catalog']*len(images),'images':images})
-        vectors=model.get_vision_embeddings(processed['images']).numpy()
-        if data.get('query'):
-            processed_query=preprocessor({'prompts':[data['query']],'images':images[:1]})
-            query=model.get_text_embeddings(processed_query['token_ids']).numpy()
-        else:
-            processed_query=preprocessor({'prompts':['query'],'images':image_array(data['image_base64'])})
-            query=model.get_vision_embeddings(processed_query['images']).numpy()
-    else:
-        encoder=image_encoder('efficientnet')
-        vectors=encoder(images,training=False).numpy()
-        query=encoder(image_array(data['image_base64']),training=False).numpy()
-    vectors=np.ascontiguousarray(vectors,dtype='float32');query=np.ascontiguousarray(query,dtype='float32')
-    faiss.normalize_L2(vectors);faiss.normalize_L2(query)
-    index=faiss.IndexFlatIP(vectors.shape[1]);index.add(vectors)
-    scores,ids=index.search(query,min(10,len(catalog)))
-    return {'matches':[{'id':catalog[int(i)]['id'],'similarity':float(score)} for i,score in zip(ids[0],scores[0])],'encoder':'TensorFlow KerasHub CLIP' if use_clip else 'TensorFlow EfficientNetB0'}
+    from .registry import load_service
+    return load_service('visual-search-engine').run(data)
 
 SERVICES={'medical-image-classifier':medical,'sign-language-translator':sign,'music-genre-mood-classifier':music,'visual-search-engine':visual}
